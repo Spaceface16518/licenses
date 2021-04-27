@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container border border-black dark:border-grey-300 bg-gray-100 dark:bg-gray-700 shadow mx-auto my-10 p-6 max-w-5xl"
+    class="container border border-black dark:border-grey-300 bg-gray-100 dark:bg-gray-700 shadow mx-auto sm:my-5 lg:my-10 p-6"
   >
     <Nuxt />
   </div>
