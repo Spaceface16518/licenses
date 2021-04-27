@@ -61,6 +61,6 @@ export default {
     },
   },
   router: {
-    base: 'licenses',
+    base: '/licenses/',
   },
 }
