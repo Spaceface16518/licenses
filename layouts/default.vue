@@ -1,55 +1,20 @@
 <template>
-  <div>
+  <div
+    class="container border border-black dark:border-grey-300 bg-gray-100 dark:bg-gray-700 shadow mx-auto my-10 p-6 max-w-5xl"
+  >
     <Nuxt />
   </div>
 </template>
 
 <style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+body {
+  @apply bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 font-mono;
+}
+p {
+  @apply py-4 text-lg;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+h1 {
+  @apply py-5 px-3 text-4xl border-b border-black dark:border-gray-300 font-sans;
 }
 </style>
