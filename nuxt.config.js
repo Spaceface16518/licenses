@@ -4,14 +4,18 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'licenses',
+    title: 'Licenses',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'A website to link to licenses from projects',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -34,12 +38,26 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxt/content'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   publicRuntimeConfig: {
     name: process.env.NAME,
+  },
+
+  hooks: {
+    'content:file:beforeParse': (file) => {
+      if (file.extension === '.md') {
+        file.data = file.data.replace(/\[year]/g, new Date().getFullYear())
+        if (process.env.NAME) {
+          file.data = file.data.replace(/\[fullname]/g, process.env.NAME)
+        }
+        if (process.env.EMAIL) {
+          file.data = file.data.replace(/\[email]/g, process.env.EMAIL)
+        }
+      }
+    },
   },
 }

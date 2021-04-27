@@ -10,11 +10,16 @@
 body {
   @apply bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 font-mono;
 }
+
 p {
   @apply py-4 text-lg;
 }
 
 h1 {
   @apply py-5 px-3 text-4xl border-b border-black dark:border-gray-300 font-sans;
+}
+
+a {
+  @apply focus:underline hover:underline;
 }
 </style>
