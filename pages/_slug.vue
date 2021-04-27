@@ -1,7 +1,9 @@
 <template>
   <main>
     <nav>
-      <a href="/"><span aria-hidden="true">🏠</span> All Licenses</a>
+      <NuxtLink to="/"
+        ><span aria-hidden="true">🏠</span> All Licenses</NuxtLink
+      >
     </nav>
     <h1>{{ license.title }}</h1>
     <nuxt-content :document="license" />
